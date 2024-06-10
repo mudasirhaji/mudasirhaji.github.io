@@ -6,73 +6,103 @@
     <title>Mudasir Haji - DevOps Engineer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
-        h1 {
-            color: #333;
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
         }
         h2 {
-            color: #555;
+            color: #007acc;
         }
-        p {
-            line-height: 1.6;
+        .skills, .certifications, .contact {
+            margin-bottom: 20px;
         }
-        .skills {
-            list-style: none;
-            padding: 0;
-        }
-        .skills li {
+        .skills li, .certifications li {
             background: #e2e2e2;
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
         }
-        .contact {
-            margin-top: 20px;
-        }
         .contact a {
             color: #007acc;
             text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mudasir Haji</h1>
-        <p><strong>Verify now</strong></p>
-        <p><strong>AWS Community Builder | DevOps Engineer</strong> with expertise in Network and Cloud Infrastructure</p>
-        <h2>Certifications</h2>
-        <ul class="skills">
-            <li>3x AWS Certified</li>
-            <li>1x Azure Certified</li>
-            <li>OCI Foundations</li>
-            <li>CCNP</li>
-        </ul>
-        <h2>Skills</h2>
-        <ul class="skills">
-            <li>Ansible</li>
-            <li>Terraform</li>
-            <li>Docker</li>
-            <li>Jenkins</li>
-            <li>Git</li>
-            <li>CICD</li>
-            <li>Kubernetes Administrator</li>
-        </ul>
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+        <header>
+            <div>
+                <h1>Mudasir Haji</h1>
+                <p>AWS Community Builder | DevOps Engineer</p>
+            </div>
+            <img src="https://via.placeholder.com/100" alt="Mudasir Haji">
+        </header>
+        <div class="content">
+            <section class="summary">
+                <h2>Summary</h2>
+                <p>Experienced DevOps Engineer with expertise in Network and Cloud Infrastructure. Skilled in AWS, Azure, OCI, and CCNP. Proficient in Ansible, Terraform, Docker, Jenkins, Git, CICD, and Kubernetes Administration.</p>
+            </section>
+            <section class="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>3x AWS Certified</li>
+                    <li>1x Azure Certified</li>
+                    <li>OCI Foundations</li>
+                    <li>CCNP</li>
+                </ul>
+            </section>
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Ansible</li>
+                    <li>Terraform</li>
+                    <li>Docker</li>
+                    <li>Jenkins</li>
+                    <li>Git</li>
+                    <li>CICD</li>
+                    <li>Kubernetes Administrator</li>
+                </ul>
+            </section>
+            <section class="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+                <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+            </section>
         </div>
     </div>
 </body>
