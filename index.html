@@ -1,110 +1,177 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudasir Haji - DevOps Engineer</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #007acc;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
-        }
-        header img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .content {
-            padding: 20px;
-        }
-        h2 {
-            color: #007acc;
-        }
-        .skills, .certifications, .contact {
-            margin-bottom: 20px;
-        }
-        .skills li, .certifications li {
-            background: #e2e2e2;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .contact a {
-            color: #007acc;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div>
-                <h1>Mudasir Haji</h1>
-                <p>AWS Community Builder | DevOps Engineer</p>
-            </div>
-            <img src="https://via.placeholder.com/100" alt="Mudasir Haji">
-        </header>
-        <div class="content">
-            <section class="summary">
-                <h2>Summary</h2>
-                <p>Experienced DevOps Engineer with expertise in Network and Cloud Infrastructure. Skilled in AWS, Azure, OCI, and CCNP. Proficient in Ansible, Terraform, Docker, Jenkins, Git, CICD, and Kubernetes Administration.</p>
-            </section>
-            <section class="certifications">
-                <h2>Certifications</h2>
-                <ul>
-                    <li>3x AWS Certified</li>
-                    <li>1x Azure Certified</li>
-                    <li>OCI Foundations</li>
-                    <li>CCNP</li>
-                </ul>
-            </section>
-            <section class="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Ansible</li>
-                    <li>Terraform</li>
-                    <li>Docker</li>
-                    <li>Jenkins</li>
-                    <li>Git</li>
-                    <li>CICD</li>
-                    <li>Kubernetes Administrator</li>
-                </ul>
-            </section>
-            <section class="contact">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-                <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
-            </section>
-        </div>
-    </div>
-</body>
-</html>
 
+```
+<meta name="description"
+      content="Mudasir Haji - DevOps Engineer specializing in Cloud, Kubernetes, CI/CD, Infrastructure Automation and Networking.">
+
+<title>Mudasir Haji | DevOps Engineer</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    :root {
+        --bg: #07111f;
+        --bg-secondary: #0b1728;
+        --card: #0f1f33;
+        --border: rgba(255,255,255,0.08);
+        --text: #e6edf7;
+        --muted: #91a4bb;
+        --primary: #38bdf8;
+        --secondary: #818cf8;
+        --accent: #22c55e;
+    }
+
+    body {
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        background:
+            radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 30%),
+            radial-gradient(circle at 90% 20%, rgba(129,140,248,0.12), transparent 30%),
+            var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .container {
+        width: min(1100px, 92%);
+        margin: auto;
+    }
+
+    /* Navigation */
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(12px);
+        background: rgba(7,17,31,0.85);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--primary);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: var(--muted);
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--primary);
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 14px;
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.03);
+        border-radius: 30px;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 12px var(--accent);
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 8vw, 82px);
+        line-height: 1.05;
+        margin-bottom: 20px;
+        letter-spacing: -3px;
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 {
+        font-size: clamp(22px, 4vw, 34px);
+        color: var(--muted);
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .hero p {
+        color: var(--muted);
+        font-size: 18px;
+        max-width: 720px;
+        margin-bottom: 32px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.3s;
+        border: 1px solid var(--border);
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: #06111d;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(56,
+```
