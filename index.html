@@ -23,7 +23,7 @@
         --bg: #07111f;
         --bg-secondary: #0b1728;
         --card: #0f1f33;
-        --border: rgba(255,255,255,0.08);
+        --border: rgba(255, 255, 255, 0.08);
         --text: #e6edf7;
         --muted: #91a4bb;
         --primary: #38bdf8;
@@ -34,8 +34,16 @@
     body {
         font-family: Inter, Arial, Helvetica, sans-serif;
         background:
-            radial-gradient(circle at 10% 10%, rgba(56,189,248,0.12), transparent 30%),
-            radial-gradient(circle at 90% 20%, rgba(129,140,248,0.12), transparent 30%),
+            radial-gradient(
+                circle at 10% 10%,
+                rgba(56, 189, 248, 0.12),
+                transparent 30%
+            ),
+            radial-gradient(
+                circle at 90% 20%,
+                rgba(129, 140, 248, 0.12),
+                transparent 30%
+            ),
             var(--bg);
         color: var(--text);
         line-height: 1.6;
@@ -51,14 +59,16 @@
         margin: auto;
     }
 
-    /* Navigation */
+    /* =========================
+       Navigation
+    ========================= */
 
     nav {
         position: sticky;
         top: 0;
         z-index: 1000;
         backdrop-filter: blur(12px);
-        background: rgba(7,17,31,0.85);
+        background: rgba(7, 17, 31, 0.85);
         border-bottom: 1px solid var(--border);
     }
 
@@ -91,7 +101,9 @@
         color: var(--primary);
     }
 
-    /* Hero */
+    /* =========================
+       Hero
+    ========================= */
 
     .hero {
         min-height: 90vh;
@@ -109,7 +121,7 @@
         gap: 8px;
         padding: 7px 14px;
         border: 1px solid var(--border);
-        background: rgba(255,255,255,0.03);
+        background: rgba(255, 255, 255, 0.03);
         border-radius: 30px;
         color: var(--muted);
         font-size: 13px;
@@ -132,7 +144,11 @@
     }
 
     .gradient-text {
-        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        background: linear-gradient(
+            90deg,
+            var(--primary),
+            var(--secondary)
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -173,5 +189,829 @@
 
     .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(56,
+        box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    /* =========================
+       Sections
+    ========================= */
+
+    section {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        margin-bottom: 45px;
+    }
+
+    .section-title span {
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+        margin-top: 8px;
+    }
+
+    .section-title p {
+        color: var(--muted);
+        margin-top: 10px;
+    }
+
+    /* =========================
+       Cards
+    ========================= */
+
+    .card {
+        background: rgba(15, 31, 51, 0.75);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 30px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(56, 189, 248, 0.35);
+    }
+
+    .card p {
+        color: var(--muted);
+    }
+
+    /* =========================
+       About
+    ========================= */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 30px;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .stat {
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 10px;
+        border: 1px solid var(--border);
+    }
+
+    .stat strong {
+        display: block;
+        font-size: 30px;
+        color: var(--primary);
+    }
+
+    .stat span {
+        color: var(--muted);
+        font-size: 13px;
+    }
+
+    /* =========================
+       Skills
+    ========================= */
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .skill-category h3 {
+        margin-bottom: 18px;
+        color: var(--primary);
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .tag {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        padding: 7px 11px;
+        border-radius: 6px;
+        font-size: 13px;
+        color: var(--muted);
+    }
+
+    /* =========================
+       Certifications
+    ========================= */
+
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+    .cert {
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    .cert-icon {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .cert h3 {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    .cert p {
+        color: var(--muted);
+        font-size: 13px;
+    }
+
+    /* =========================
+       Projects
+    ========================= */
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .project h3 {
+        margin-bottom: 10px;
+    }
+
+    .project p {
+        color: var(--muted);
+        margin-bottom: 18px;
+    }
+
+    .project-link {
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* =========================
+       Contact
+    ========================= */
+
+    .contact-box {
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .contact-box h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .contact-box p {
+        color: var(--muted);
+        max-width: 600px;
+        margin: 0 auto 28px;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+        border-top: 1px solid var(--border);
+        padding: 30px 0;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* =========================
+       Mobile
+    ========================= */
+
+    @media (max-width: 800px) {
+
+        .nav-links {
+            display: none;
+        }
+
+        .hero {
+            min-height: 80vh;
+        }
+
+        .about-grid,
+        .projects {
+            grid-template-columns: 1fr;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .cert-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 520px) {
+
+        section {
+            padding: 70px 0;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cert-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero h1 {
+            letter-spacing: -2px;
+        }
+    }
+</style>
 ```
+
+</head>
+
+<body>
+
+```
+<!-- =========================
+     Navigation
+========================== -->
+
+<nav>
+    <div class="container nav-container">
+
+        <a href="#" class="logo">MH.</a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- =========================
+     Hero
+========================== -->
+
+<header class="hero">
+
+    <div class="container hero-content">
+
+        <div class="status">
+            <span class="status-dot"></span>
+            DevOps Engineer · Cloud · Infrastructure
+        </div>
+
+        <h1>
+            Hi, I'm
+            <span class="gradient-text">Mudasir Haji</span>
+        </h1>
+
+        <h2>
+            DevOps Engineer & Cloud Infrastructure Enthusiast
+        </h2>
+
+        <p>
+            I build and automate reliable infrastructure, CI/CD pipelines,
+            container platforms and cloud environments. My focus is on
+            automation, scalability, security and operational excellence.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                class="btn btn-primary"
+                href="https://github.com/mudasirhaji"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a
+                class="btn btn-secondary"
+                href="https://www.linkedin.com/in/mudasirhaji/"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a
+                class="btn btn-secondary"
+                href="#projects">
+                View Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     About
+========================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>About Me</span>
+
+            <h2>
+                Infrastructure meets automation.
+            </h2>
+
+            <p>
+                Building reliable platforms and simplifying complex operations.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="card">
+
+                <p>
+                    I'm a DevOps Engineer with experience across cloud
+                    infrastructure, networking, containerization and
+                    automation.
+                </p>
+
+                <br>
+
+                <p>
+                    I work with technologies such as AWS, Azure, OCI,
+                    Kubernetes, Docker, Terraform, Ansible and Git-based
+                    CI/CD platforms.
+                </p>
+
+                <br>
+
+                <p>
+                    I enjoy designing infrastructure, automating repetitive
+                    tasks, improving deployment processes and building
+                    reliable environments for development and production.
+                </p>
+
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <strong>Cloud</strong>
+                    <span>AWS · Azure · OCI</span>
+                </div>
+
+                <div class="stat">
+                    <strong>CI/CD</strong>
+                    <span>GitLab · Jenkins · Git</span>
+                </div>
+
+                <div class="stat">
+                    <strong>K8s</strong>
+                    <span>Kubernetes & Containers</span>
+                </div>
+
+                <div class="stat">
+                    <strong>IaC</strong>
+                    <span>Terraform · Ansible</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Skills
+========================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Technology</span>
+
+            <h2>
+                Skills & Tools
+            </h2>
+
+            <p>
+                Technologies I use to build, automate and operate infrastructure.
+            </p>
+
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="card skill-category">
+
+                <h3>☁️ Cloud</h3>
+
+                <div class="tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Oracle Cloud</span>
+                    <span class="tag">EC2</span>
+                    <span class="tag">VPC</span>
+                    <span class="tag">IAM</span>
+                </div>
+
+            </div>
+
+
+            <div class="card skill-category">
+
+                <h3>⚙️ DevOps</h3>
+
+                <div class="tags">
+                    <span class="tag">GitLab CI/CD</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Harbor</span>
+                    <span class="tag">Helm</span>
+                </div>
+
+            </div>
+
+
+            <div class="card skill-category">
+
+                <h3>☸️ Kubernetes</h3>
+
+                <div class="tags">
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Helm</span>
+                    <span class="tag">Ingress</span>
+                    <span class="tag">RBAC</span>
+                    <span class="tag">Namespaces</span>
+                    <span class="tag">Deployments</span>
+                </div>
+
+            </div>
+
+
+            <div class="card skill-category">
+
+                <h3>🏗️ Infrastructure</h3>
+
+                <div class="tags">
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Ansible</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">VMware</span>
+                    <span class="tag">Networking</span>
+                </div>
+
+            </div>
+
+
+            <div class="card skill-category">
+
+                <h3>📊 Monitoring</h3>
+
+                <div class="tags">
+                    <span class="tag">Prometheus</span>
+                    <span class="tag">Grafana</span>
+                    <span class="tag">Alertmanager</span>
+                    <span class="tag">Node Exporter</span>
+                </div>
+
+            </div>
+
+
+            <div class="card skill-category">
+
+                <h3>🔐 Security</h3>
+
+                <div class="tags">
+                    <span class="tag">SAST</span>
+                    <span class="tag">Trivy</span>
+                    <span class="tag">Gitleaks</span>
+                    <span class="tag">IAM</span>
+                    <span class="tag">TLS</span>
+                    <span class="tag">WAF</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Certifications
+========================== -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Credentials</span>
+
+            <h2>
+                Certifications
+            </h2>
+
+            <p>
+                Professional certifications and technical credentials.
+            </p>
+
+        </div>
+
+        <div class="cert-grid">
+
+            <div class="card cert">
+
+                <div class="cert-icon">
+                    ☁️
+                </div>
+
+                <h3>AWS</h3>
+
+                <p>
+                    3 AWS Certifications
+                </p>
+
+            </div>
+
+
+            <div class="card cert">
+
+                <div class="cert-icon">
+                    🔷
+                </div>
+
+                <h3>Azure</h3>
+
+                <p>
+                    Azure Certified
+                </p>
+
+            </div>
+
+
+            <div class="card cert">
+
+                <div class="cert-icon">
+                    🟠
+                </div>
+
+                <h3>OCI</h3>
+
+                <p>
+                    OCI Foundations
+                </p>
+
+            </div>
+
+
+            <div class="card cert">
+
+                <div class="cert-icon">
+                    🌐
+                </div>
+
+                <h3>CCNP</h3>
+
+                <p>
+                    Cisco Certified Network Professional
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Projects
+========================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>What I Build</span>
+
+            <h2>
+                Featured Projects
+            </h2>
+
+            <p>
+                Infrastructure, automation and DevOps projects.
+            </p>
+
+        </div>
+
+        <div class="projects">
+
+            <div class="card project">
+
+                <h3>
+                    🚀 CI/CD Platform
+                </h3>
+
+                <p>
+                    Automated CI/CD pipelines using GitLab, Docker,
+                    security scanning, container registries and
+                    Kubernetes deployments.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/mudasirhaji"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <div class="card project">
+
+                <h3>
+                    ☸️ Kubernetes Infrastructure
+                </h3>
+
+                <p>
+                    Container orchestration environments using Kubernetes,
+                    Helm, ingress controllers, namespaces and
+                    infrastructure automation.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/mudasirhaji"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <div class="card project">
+
+                <h3>
+                    🏗️ Infrastructure as Code
+                </h3>
+
+                <p>
+                    Infrastructure provisioning and configuration
+                    automation using Terraform and Ansible.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/mudasirhaji"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+
+            <div class="card project">
+
+                <h3>
+                    📊 Monitoring Platform
+                </h3>
+
+                <p>
+                    Infrastructure monitoring using Prometheus,
+                    Grafana, Alertmanager and exporters for
+                    operational visibility.
+                </p>
+
+                <a
+                    class="project-link"
+                    href="https://github.com/mudasirhaji"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Contact
+========================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="card contact-box">
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                Interested in DevOps, cloud infrastructure,
+                automation or Kubernetes? Feel free to connect
+                with me.
+            </p>
+
+            <div
+                class="buttons"
+                style="justify-content: center;">
+
+                <a
+                    class="btn btn-primary"
+                    href="https://www.linkedin.com/in/mudasirhaji/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://github.com/mudasirhaji"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Footer
+========================== -->
+
+<footer>
+
+    <div class="container">
+        © 2026 Mudasir Haji · DevOps Engineer
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
